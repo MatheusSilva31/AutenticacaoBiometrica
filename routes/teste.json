@@ -1,0 +1,193 @@
+{
+    "config": {
+        "adapter": [Function xhrAdapter
+        ],
+        "data": "{\"conectar\":{\"email\":\"Marcos@hotmail.com\",\"senha\":\"123\"}}",
+        "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/json"
+        },
+        "maxBodyLength": -1,
+        "maxContentLength": -1,
+        "method": "post",
+        "timeout": 0,
+        "transformRequest": [
+            [Function transformRequest
+            ]
+        ],
+        "transformResponse": [
+            [Function transformResponse
+            ]
+        ],
+        "transitional": {
+            "clarifyTimeoutError": false,
+            "forcedJSONParsing": true,
+            "silentJSONParsing": true
+        },
+        "url": "http://4806-2804-420c-107a-2000-e9b6-99d7-d141-a267.ngrok.io/api/login",
+        "validateStatus": [Function validateStatus
+        ],
+        "xsrfCookieName": "XSRF-TOKEN",
+        "xsrfHeaderName": "X-XSRF-TOKEN"
+    },
+    "data": "",
+    "headers": {
+        "content-length": "0",
+        "date": "Fri, 15 Oct 2021 21:04:10 GMT"
+    },
+    "request": {
+        "DONE": 4,
+        "HEADERS_RECEIVED": 2,
+        "LOADING": 3,
+        "OPENED": 1,
+        "UNSENT": 0,
+        "_aborted": false,
+        "_cachedResponse": undefined,
+        "_hasError": false,
+        "_headers": {
+            "accept": "application/json, text/plain, */*",
+            "content-type": "application/json"
+        },
+        "_incrementalEvents": false,
+        "_lowerCaseResponseHeaders": {
+            "content-length": "0",
+            "date": "Fri, 15 Oct 2021 21:04:10 GMT"
+        },
+        "_method": "POST",
+        "_perfKey": "network_XMLHttpRequest_http://4806-2804-420c-107a-2000-e9b6-99d7-d141-a267.ngrok.io/api/login",
+        "_performanceLogger": {
+            "_closed": false,
+            "_extras": [Object
+            ],
+            "_pointExtras": [Object
+            ],
+            "_points": [Object
+            ],
+            "_timespans": [Object
+            ]
+        },
+        "_requestId": null,
+        "_response": "",
+        "_responseType": "",
+        "_sent": true,
+        "_subscriptions": [],
+        "_timedOut": false,
+        "_trackingName": "unknown",
+        "_url": "http://4806-2804-420c-107a-2000-e9b6-99d7-d141-a267.ngrok.io/api/login",
+        "readyState": 4,
+        "responseHeaders": {
+            "Content-Length": "0",
+            "Date": "Fri, 15 Oct 2021 21:04:10 GMT"
+        },
+        "responseURL": "http://4806-2804-420c-107a-2000-e9b6-99d7-d141-a267.ngrok.io/api/login",
+        "status": 200,
+        "timeout": 0,
+        "upload": {},
+        "withCredentials": true
+    },
+    "status": 200,
+    "statusText": undefined
+}
+
+
+
+ {
+    "config": {
+        "adapter": [Function xhrAdapter
+        ],
+        "data": "{\"email\":\"Marcos@hotmail.com\",\"senha\":\"123\"}",
+        "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/json"
+        },
+        "maxBodyLength": -1,
+        "maxContentLength": -1,
+        "method": "post",
+        "timeout": 0,
+        "transformRequest": [
+            [Function transformRequest
+            ]
+        ],
+        "transformResponse": [
+            [Function transformResponse
+            ]
+        ],
+        "transitional": {
+            "clarifyTimeoutError": false,
+            "forcedJSONParsing": true,
+            "silentJSONParsing": true
+        },
+        "url": "http://ca0b-2804-420c-107a-2000-e9b6-99d7-d141-a267.ngrok.io/api/login",
+        "validateStatus": [Function validateStatus
+        ],
+        "xsrfCookieName": "XSRF-TOKEN",
+        "xsrfHeaderName": "X-XSRF-TOKEN"
+    },
+    "data": {
+        "cargo": "dev",
+        "classificacao": "junior",
+        "email": "Marcos@hotmail.com",
+        "id": 4,
+        "nome": "marcos",
+        "senha": "123"
+    },
+    "headers": {
+        "content-type": "application/json",
+        "date": "Fri, 15 Oct 2021 21:15:32 GMT",
+        "transfer-encoding": "chunked"
+    },
+    "request": {
+        "DONE": 4,
+        "HEADERS_RECEIVED": 2,
+        "LOADING": 3,
+        "OPENED": 1,
+        "UNSENT": 0,
+        "_aborted": false,
+        "_cachedResponse": undefined,
+        "_hasError": false,
+        "_headers": {
+            "accept": "application/json, text/plain, */*",
+            "content-type": "application/json"
+        },
+        "_incrementalEvents": false,
+        "_lowerCaseResponseHeaders": {
+            "content-type": "application/json",
+            "date": "Fri, 15 Oct 2021 21:15:32 GMT",
+            "transfer-encoding": "chunked"
+        },
+        "_method": "POST",
+        "_perfKey": "network_XMLHttpRequest_http://4806-2804-420c-107a-2000-e9b6-99d7-d141-a267.ngrok.io/api/login",
+        "_performanceLogger": {
+            "_closed": false,
+            "_extras": [Object
+            ],
+            "_pointExtras": [Object
+            ],
+            "_points": [Object
+            ],
+            "_timespans": [Object
+            ]
+        },
+        "_requestId": null,
+        "_response": "{\"id\":4,\"nome\":\"marcos\",\"email\":\"Marcos@hotmail.com\",\"senha\":\"123\",\"cargo\":\"dev\",\"classificacao\":\"junior\"}",
+        "_responseType": "",
+        "_sent": true,
+        "_subscriptions": [],
+        "_timedOut": false,
+        "_trackingName": "unknown",
+        "_url": "http://4806-2804-420c-107a-2000-e9b6-99d7-d141-a267.ngrok.io/api/login",
+        "readyState": 4,
+        "responseHeaders": {
+            "Content-Type": "application/json",
+            "Date": "Fri, 15 Oct 2021 21:15:32 GMT",
+            "Transfer-Encoding": "chunked"
+        },
+        "responseURL": "http://4806-2804-420c-107a-2000-e9b6-99d7-d141-a267.ngrok.io/api/login",
+        "status": 200,
+        "timeout": 0,
+        "upload": {},
+        "withCredentials": true
+    },
+    "status": 200,
+    "statusText": undefined
+}

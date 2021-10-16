@@ -1,9 +1,10 @@
 import { useNavigation } from '@react-navigation/native';
-import React,{useState,useEffect,useRef} from 'react';
-import { View,Text,TextInput,TouchableOpacity,StyleSheet,SafeAreaView, Alert,Keyboard,Image } from 'react-native';
+import React,{useState,useEffect,useRef,} from 'react';
+import { View,Text,TextInput,TouchableOpacity,StyleSheet,SafeAreaView, Alert,Keyboard,Image,AsyncStorage } from 'react-native';
 import TouchID from 'react-native-touch-id'; 'react-native-touch-id'
 // import { Container } from './styles';
-
+import axios from "axios";
+// import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function Login(){
 
@@ -36,7 +37,7 @@ useEffect(()=>{
 },[]);
 
 
-function login(){
+async function login(){
   const configs ={
     title:'Autenticação Biométrica',
     color:"purple",
@@ -44,25 +45,57 @@ function login(){
   }
   TouchID.authenticate("Login",configs)
   .then(secesso=>{
-    if(conectar.email =='matheus' && conectar.senha =='123'){
-      setAutenticado(true)
-      console.log('bem vindo')
-      // navigation.navigate('Principal')
-      navigation.reset({
-        index:0,
-        routes:[{name:'Principal'}]
+  //   if(conectar.email =='matheus' && conectar.senha =='123'){
+  //     setAutenticado(true)
+  //     console.log('bem vindo')
+  //     console.log(conectar,"conectar")
+  //     navigation.navigate('Principal')
+  //     navigation.reset({
+  //       index:0,
+  //       routes:[{name:'Principal'}]
+  //     })
+       axios.post('http://ca0b-2804-420c-107a-2000-e9b6-99d7-d141-a267.ngrok.io/api/login',{email:conectar.email,senha:conectar.senha})
+      .then((resposta)=>{
+        const dados=resposta.data
+
+        // console.log(resposta)
+        // console.log(conectar)
+        
+        if(dados != ''){
+          navigation.reset({
+            index:0,
+            routes:[{name:'Principal'}]
+          })
+         
+          // console.log(dados,'dentro do if')
+          const userData = async(dados)=>{
+            await AsyncStorage.setItem('usuario',JSON.stringify(dados))
+            
+        }
+
+        userData(dados)
+        // navigation.navigate('Principal')
+        
+         
+        }else{
+          Alert.alert('login ou senha invalidos')
+        }
       })
-    }else{
-      Alert.alert('login ou senha invalidos')
-    }
+      .catch((error)=>{
+        console.log(error)
+      })
+  //   }else{
+  //     Alert.alert('login ou senha invalidos')
+  //   }
   
   })
   .catch((erro)=>{
     setAutenticado(false)
     console.log("falha na autenticação", erro)
+    
   })
 
-  console.warn(conectar)
+  
 
   
 } 

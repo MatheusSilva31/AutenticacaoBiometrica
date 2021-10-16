@@ -13,7 +13,7 @@ export function AppRoutes(){
     return(
         <NavigationContainer>
             <Stack.Navigator initialRouteName={Login}>
-                <Stack.Screen name="Login" component={Login}
+            <Stack.Screen name="Login" component={Login}
                 options={{
                         
                    
@@ -21,8 +21,10 @@ export function AppRoutes(){
                     
                     headerTintColor: '#000000'
                 }}/>
+               
                 <Stack.Screen name="Principal" component={Principal} 
                 />
+               
             </Stack.Navigator>
         </NavigationContainer>
     )
